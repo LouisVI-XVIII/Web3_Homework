@@ -30,14 +30,9 @@ def compile_solidity(contract: str) -> dict:
     return compiled_sol
 
 
-contract_path = os.path.join(os.path.dirname(__file__), '/Users/Pierre/Desktop/BLOCKCH/Web3_Homework/newContract.sol')
+if __name__ == "__main__":
+    compiled_sol = compile_solidity ("/Users/Pierre/Desktop/BLOCKCH/Web3_Homework/newContract.sol")
+    with open("/Users/Pierre/Desktop/BLOCKCH/Web3_Homework/src/compiled_code.json", "w") as file:
+        json.dump(compiled_sol, file)
+        print(compiled_sol)
 
-
-compiled_contract = compile_solidity(contract_path)
-
-
-output_path = os.path.join(os.path.dirname(__file__), 'compiled_code.json')
-with open(output_path, "w") as file:
-    json.dump(compiled_contract, file)
-
-print("Contract compiled successfully and saved as 'compiled_code.json'")
