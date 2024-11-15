@@ -22,7 +22,7 @@ with open("src/compiled_code.json", "r") as file:
     abi = compiled_contract['contracts']['/Users/Pierre/Desktop/BLOCKCH/Web3_Homework/newContract.sol']['newContract']['abi']
 
 
-contract_address = "0x5FbDB2315678afecb367f032d93F642f64180aa33"  
+contract_address = "0x5FbDB2315678afecb367f032d93F642f64180aa3"  
 
 contract = w3.eth.contract(address=contract_address, abi=abi)
 
